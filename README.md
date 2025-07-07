@@ -5,7 +5,7 @@ Dataset: The dataset includes emission data by industry, country, and year, alon
 
 SQL Project Idea: Create a carbon tracking database in SQL.
 
-A carbon tracking database was created using Microsoft SQL Server Management Studio. Data claning processes were applied such as blank spaces replaced with Zero's (0) and changed the data types to float, varchar, int and text. The table Cargo Emissions was imported as a CSV file into the database.
+A carbon tracking database was created using Microsoft SQL Server Management Studio. Data cleaning processes were applied such as blank spaces replaced with Zero's (0) and changed the data types to float, varchar, int and text. The table Cargo Emissions was imported as a CSV file into the database.
 
 The following questions were answered using SQL. They are highlighted below:
 
@@ -52,6 +52,24 @@ Result: Nearly all sectors showed a reduction in the last 10 years with further 
 
 
 3. Which industries showed a decline in emissions over the years?
+
+
+SQL QUERY FOR Q3
+
+Trend chart from SQL Q2 result was used to get the result for SQL Q3
+
+
+![Carbon Emissons Industry Decade Trend Q3 Result pptx](https://github.com/user-attachments/assets/1da6432d-72e9-4f94-973f-b37f182e81d0)
+
+
+Three major industries showed a decline over the years being as seen from chart above
+
+1.	PAEIEUS
+2.	RFEIEUS
+3.	PCEIEUS
+
+
+
 
 4. How does the emission share differ across continents or economic zones?
 
