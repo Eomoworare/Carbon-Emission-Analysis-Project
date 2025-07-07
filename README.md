@@ -1,4 +1,4 @@
-# Carbon-Emission-Analysis-Project
+# Carbon-Emission-Analysis
 Understanding carbon emissions across various industries is vital in tackling global climate change. With SQL, I will uncover which sectors are the biggest polluters and track how these emissions have changed over time to aid in sustainable decision-making.
 
 Dataset: The dataset includes emission data by industry, country, and year, along with greenhouse gas types like CO2, CH4, and N2O.
@@ -60,7 +60,8 @@ SQL QUERY FOR Q3
 Trend chart from SQL Q2 result was used to get the result for SQL Q3
 
 
-[Carbon Emissions Industry Decade Trend Q3 Result.pptx](https://github.com/user-attachments/files/21101559/Carbon.Emissions.Industry.Decade.Trend.Q3.Result.pptx)
+![Carbon Emissions Industry Decade Trend Q3 Result](https://github.com/user-attachments/assets/6c430a81-8614-4365-99c4-e67c1d119896)
+
 
 
 
