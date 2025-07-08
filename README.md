@@ -25,7 +25,7 @@ where year =
 
 Result: 201.957992553711
 
-![image](https://github.com/user-attachments/assets/aae18258-b931-4ffc-9c86-c2662b4f1bc8)
+![image](https://github.com/user-attachments/assets/e066af91-c148-4abb-84ac-c0d0013ecafc)
 
 
 
@@ -44,11 +44,12 @@ Group by MSN, Year
 Order by MSN
 
 
-Result: Nearly all sectors showed a reduction in the last 10 years with further reduction in CO2 emissions in 2016 being the latest year.
+Result: Nearly all sectors showed a reduction in the last 10 years with further significant reduction in CO2 emissions in 2016.
 
 
 
-[Carbon Emissions Industry Decade Trend.pptx](https://github.com/user-attachments/files/21130117/Carbon.Emissions.Industry.Decade.Trend.pptx)
+![image](https://github.com/user-attachments/assets/576ed0fb-fb80-4c18-863a-6048505a0fd8)
+
 
 
 
@@ -97,7 +98,9 @@ Order by [Total Emissions]
 
 Result: 
 
-![image](https://github.com/user-attachments/assets/c20b0355-81ed-4b39-aa21-b38924f6241d)
+
+![image](https://github.com/user-attachments/assets/d13d9e90-8776-4253-b87b-03daa06959a5)
+
 
 
  5. Identify the top three emitting industries and their year-wise emission pattern.
@@ -116,6 +119,8 @@ Group by [Description]
 Order by [Total Emissions] Desc
 
 
+![image](https://github.com/user-attachments/assets/3e2f9529-3c06-4c22-9493-11d89b5b57ee)
+
 
 
 
@@ -128,12 +133,13 @@ Group by column_order
 Order by [Total Emissions] Desc
 
  
-![image](https://github.com/user-attachments/assets/8ba6a345-e95d-4bed-a7d4-c843b1115e12)
+![image](https://github.com/user-attachments/assets/a1fc97da-a2f1-463b-a98a-1482283171ed)
 
 
 
 
---Q53 Identify the top three emitting industries and their year-wise emission pattern.
+
+Q5 Identify the top three emitting industries and their year-wise emission pattern.
 Select [Description],
 	   round(sum(value),2) as [Total Emissions], 
        Year
@@ -148,5 +154,5 @@ Order by [Description]
 
 
 
+![image](https://github.com/user-attachments/assets/3a625242-a44b-469d-b361-6fc2173f0f72)
 
-![image](https://github.com/user-attachments/assets/26695756-57e3-40c1-9b96-dbf40885f61f)
