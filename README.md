@@ -12,7 +12,7 @@ The following questions were answered using SQL. They are highlighted below:
 1. Which industry had the highest CO2 emissions in the most recent year?
 
 
-**SQL QUERY FOR Q1. **
+S**QL QUERY FOR Q1.**
 
 --Query to produce the highest emission in the latest year
 --Question 1:
@@ -29,11 +29,10 @@ Result: 201.957992553711
 
 
 
-
 2. What has been the trend of total emissions across sectors over the last decade?
 
 
-**SQL QUERY FOR Q2. **
+**SQL QUERY FOR Q2.**
 
  --Query to show the values of emissions over the last 10 years for each sector
 --Question 2:
@@ -72,9 +71,7 @@ Order by MSN
 
 Result: Trend chart from SQL Q2 result was used to get the result for SQL Q3
 
-
 ![Carbon Emissions Industry Decade Trend Q3 Result v](https://github.com/user-attachments/assets/93f66223-03ca-4e72-a9b8-2cee97413c03)
-
 
 
 Three major industries showed a decline over the years being as seen from chart above
