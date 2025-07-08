@@ -68,11 +68,9 @@ where YEAR>=
 Group by MSN, Year 
 Order by MSN
 
-
 Result: Trend chart from SQL Q2 result was used to get the result for SQL Q3
 
 ![Carbon Emissions Industry Decade Trend Q3 Result v](https://github.com/user-attachments/assets/93f66223-03ca-4e72-a9b8-2cee97413c03)
-
 
 Three major industries showed a decline over the years being as seen from chart above
 
