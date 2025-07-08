@@ -29,7 +29,6 @@ Result: 201.957992553711
 
 
 
-
 2. What has been the trend of total emissions across sectors over the last decade?
 
 SQL QUERY FOR Q2. 
@@ -47,7 +46,8 @@ Order by MSN
 Result: Nearly all sectors showed a reduction in the last 10 years with further reduction in CO2 emissions in 2016 being the latest year.
 
 
-![Carbon Emissions Industry Decade Trend](https://github.com/user-attachments/assets/867aac29-0551-458a-b997-c5d37562c972)
+
+[Carbon Emissions Industry Decade Trend.pptx](https://github.com/user-attachments/files/21130117/Carbon.Emissions.Industry.Decade.Trend.pptx)
 
 
 
@@ -57,11 +57,21 @@ Result: Nearly all sectors showed a reduction in the last 10 years with further 
 
 SQL QUERY FOR Q3
 
-Trend chart from SQL Q2 result was used to get the result for SQL Q3
+--Query to show the values of emissions over the last 10 years for each sector
+--Question 3:
+select MSN, round(sum(value),2) as [Total Emissions], Year
+FROM [Carbon Emissions].[dbo].[Cargo Emissions Data v.2]
+where YEAR>=
+(SELECT MAX (YEAR)-10
+ FROM [Carbon Emissions].[dbo].[Cargo Emissions Data v.2])
+Group by MSN, Year 
+Order by MSN
 
 
-![Carbon Emissions Industry Decade Trend Q3 Result](https://github.com/user-attachments/assets/6c430a81-8614-4365-99c4-e67c1d119896)
+Result: Trend chart from SQL Q2 result was used to get the result for SQL Q3
 
+
+![Carbon Emissions Industry Decade Trend Q3 Result v](https://github.com/user-attachments/assets/93f66223-03ca-4e72-a9b8-2cee97413c03)
 
 
 
@@ -72,5 +82,72 @@ Three major industries showed a decline over the years being as seen from chart 
 3.	PCEIEUS
 
 
+4. How does the emission share differ across continents or economic zones?
+
+SQL QUERY FOR Q4
+
+--Query to show How the emission share differ across economic zones
+--Question 4:
+SELECT DISTINCT MSN, 
+       sum(value) as [Total Emissions], 
+       ROUND(sum(value)* 100.0 / (SELECT DISTINCT sum(value) FROM [Carbon Emissions].[dbo].[Cargo Emissions Data v.2]),2) as [% Emissions]
+FROM [Carbon Emissions].[dbo].[Cargo Emissions Data v.2]
+Group by MSN
+With Rollup
+Order by [Total Emissions]
 
 
+Result: 
+
+![image](https://github.com/user-attachments/assets/c20b0355-81ed-4b39-aa21-b38924f6241d)
+
+
+ 5. Identify the top three emitting industries and their year-wise emission pattern.
+
+SQL QUERY FOR Q5
+
+--Q51-Query to Identify the top three emitting industries and their year-wise emission pattern.
+--Question 5:
+
+--To identify the top 3 industries by Description
+Select top 3 [Description],
+	   Round(sum(value),2) as [Total Emissions]
+FROM [Carbon Emissions].[dbo].[Cargo Emissions Data v.2]
+Group by [Description]
+Order by [Total Emissions] Desc
+
+
+
+
+
+
+--Q52-To identify the top 3 industries by column order
+Select top 3 column_order,
+	   Round(sum(value),2) as [Total Emissions]
+FROM [Carbon Emissions].[dbo].[Cargo Emissions Data v.2]
+Group by column_order
+Order by [Total Emissions] Desc
+
+ 
+![image](https://github.com/user-attachments/assets/8ba6a345-e95d-4bed-a7d4-c843b1115e12)
+
+
+
+
+--Q53 Identify the top three emitting industries and their year-wise emission pattern.
+Select [Description],
+	   round(sum(value),2) as [Total Emissions], 
+       Year
+FROM [Carbon Emissions].[dbo].[Cargo Emissions Data v.2]
+where [Column_Order] = 9
+OR
+[Column_Order] = 1
+OR
+[Column_Order] = 2
+Group by [Description], Year 
+Order by [Description]
+
+
+
+
+![image](https://github.com/user-attachments/assets/26695756-57e3-40c1-9b96-dbf40885f61f)
