@@ -12,7 +12,7 @@ The following questions were answered using SQL. They are highlighted below:
 1. Which industry had the highest CO2 emissions in the most recent year?
 
 
-S**QL QUERY FOR Q1.**
+**SQL QUERY FOR Q1.**
 
 --Query to produce the highest emission in the latest year
 --Question 1:
